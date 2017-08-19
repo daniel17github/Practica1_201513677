@@ -8,6 +8,7 @@ import java.util.Scanner;
  */
 public final class Menu{
     
+   Modosjuego modos = new Modosjuego ();
 String enter;
     public Menu() {
     
@@ -59,14 +60,16 @@ String enter;
             System.out.println("----------------------------------------");
             
             switch(opc){
+                
                  case 1:
-                     System.out.println("hola");
+                     Modosjuego.Principiante();
+                     
                     break;
                  case 2:
-                     System.out.println("hola2");
+                     Modosjuego.Intermedio();
                      break;
                  case 3:
-                        System.out.println("");
+                     Modosjuego.Experto();
                      break;
                  case 4:
                      System.out.println("Saliendo");
