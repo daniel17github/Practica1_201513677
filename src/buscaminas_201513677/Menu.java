@@ -1,6 +1,6 @@
 
 package buscaminas_201513677;
-
+import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
  *
@@ -8,15 +8,13 @@ import java.util.Scanner;
  */
 public final class Menu{
     
-    Modosjuego mdj = new Modosjuego();
-    
-public int Opciones;
-
-
+String enter;
     public Menu() {
     
-    Opciones = 0 ;    
-        
+        menuInicio();
+    }
+       
+        public  void menuInicio(){
      //Menu de Datos     
             System.out.println("***************************************");
             System.out.println("*    Daniel Alejandro Orozco Melgar   *");
@@ -25,39 +23,71 @@ public int Opciones;
             System.out.println("*            ''BUSCAMINAS''           *");
             System.out.println("***************************************");    
            
+            Scanner leer = new Scanner(System.in);
+            enter = leer.nextLine();
+                 switch (enter) {
+                  case "":
+                    menusecundario();
             
+                break;
+            default:
+                System.err.println(" Para avanzar Presinone enter");
+                menuInicio();
+                break;
+        }
   
-    
-    do {
+    }
+        
+        public void menusecundario(){
+        int opc = 0;
+        
+        
+        do{
+            
+            try{
+                
+            Scanner a = new Scanner(System.in); 
+                
             System.out.println("----------------------------------------");
             System.out.println("               BUSCAMINAS               ");
             System.out.println(" 1. Principiante                        ");
             System.out.println(" 2. Intermedio                          ");
             System.out.println(" 3. Experto                             ");
             System.out.println(" 4. Salir                               ");    
-            Scanner leer = new Scanner(System.in);
-            Opciones = leer.nextInt();
-            switch(Opciones){
-                case 1:
-                   Modosjuego(Principiante());
-                   
+            System.out.println(" Ingrese Opcion: ");
+            opc = a.nextInt();
+            System.out.println("----------------------------------------");
+            
+            switch(opc){
+                 case 1:
+                     System.out.println("hola");
                     break;
-                case 2:
-                    Modosjuego(Intermedio);
-                    break;
-                case 3:
-                    Modosjuego(Experto);
-                    break;
-                case 4:
-                    break;
-                default:
-                    System.out.println("Opcion Invalida");
-                    break;
+                 case 2:
+                     System.out.println("hola2");
+                     break;
+                 case 3:
+                        System.out.println("");
+                     break;
+                 case 4:
+                     System.out.println("Saliendo");
+                     break;
+                     
+                 default:
+                    System.out.print("La opcion " + opc + " no existe ");
+                    System.out.println("!La opcion debe estar entre 1 y 4¡");
+                    System.out.println(" ");
+                            break;
+                    }
+                                    
+            }catch (InputMismatchException e) {
+                    System.err.println("Error!! solo se puden ingresar datos del tipo numerico");
+                    System.err.println("Intentelo nuevamente");
 
-            }
-        } while (Opciones != 4);
-    }
-
-  
-
+                } catch (Exception e) {
+                    System.out.println("ERROR !!!");
+                }
+        } while (opc!=4);
+        }
+        
+}
    
