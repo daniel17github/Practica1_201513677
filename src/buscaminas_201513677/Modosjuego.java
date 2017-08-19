@@ -8,18 +8,29 @@ public class Modosjuego {
     
     
     
-    public void Principiante() {
-        System.out.println("hola");
+    public static void Principiante() {
+        System.out.println("---------------------------------");
+        System.out.println("       NIVEL PRINCIPIANTE        ");
+        
+             
+        
     }
 
-    public void Intermedio() {
-        System.out.println("hoola");
+    public static void Intermedio() {
+        System.out.println("---------------------------------");
+        System.out.println("       NIVEL INTERMEDIO          ");
     }
 
-    public void Experto() {
-        System.out.println("holaaa");
+    
+    
+    public static void Experto() {
+        System.out.println("---------------------------------");
+        System.out.println("         NIVEL EXPERTO          ");
     }
             
+    
+    
+    
         }
     
 
