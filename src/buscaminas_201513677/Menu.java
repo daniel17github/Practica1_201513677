@@ -42,10 +42,10 @@ String enter;
         public void menusecundario(){
         int opc = 0;
         
-        
+            
         do{
             
-            try{
+            try {
                 
             Scanner a = new Scanner(System.in); 
                 
@@ -82,13 +82,14 @@ String enter;
                             break;
                     }
                                     
-            }catch (InputMismatchException e) {
+            } catch (InputMismatchException e) {
                     System.err.println("Error!! solo se puden ingresar datos del tipo numerico");
                     System.err.println("Intentelo nuevamente");
 
                 } catch (Exception e) {
                     System.out.println("ERROR !!!");
                 }
+            
         } while (opc!=4);
         }
         
