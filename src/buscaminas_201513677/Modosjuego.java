@@ -1,7 +1,6 @@
 
 package buscaminas_201513677;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
  *
@@ -18,94 +17,156 @@ import java.util.Scanner;
     //Nivel principiante
     public static  void Principiante() {
         int matriz[][]= new int[4][4];
+         String opcenletra;
         
-        
+         do{
+            
+                 
+                 Scanner b = new Scanner(System.in);
         System.out.println("    ---------------------------------");
         System.out.println("           NIVEL PRINCIPIANTE        ");
       
-        for (int x=0; x < matriz.length; x++) {
-         System.out.print("|");
-            for (int y=0; y < matriz[x].length; y++) {
-                System.out.print (matriz[x][y]);
-        if (y!=matriz[x].length-1) System.out.print("\t");
+        for (int[] matriz1 : matriz) {
+            System.out.print("|");
+            for (int y = 0; y < matriz1.length; y++) {
+                System.out.print(matriz1[y]);
+                if (y != matriz1.length - 1) {
+                    System.out.print("\t");
+                }
             }
-                System.out.println("|");
-            }
-    }
-    
-    
+            System.out.println("|");
+        }
+        System.out.println("        ------------------");
+        System.out.println("            Voltear:   V");
+        System.out.println("            Reiniciar: R");
+        System.out.println("            Salir:     S"); 
+        System.out.println("");
+        System.out.println("    Ingresar Opcion:");
+        opcenletra =  b.nextLine();
+        opcenletra = opcenletra.toLowerCase();
+        System.out.println("   ---------------------------------");
+        switch(opcenletra){
+         
+             case "v":
+                    System.out.println("hola");
+                 break;
+         
+             case "r":
+                 System.out.println("holix");
+                 break;
+                 
+             case "s":
+                 System.out.println("Saliendo....Regreso a Menu Principal");
+                 break;
+                           
+             }
+        } while (!"s".equals(opcenletra));
+        
+      }
+      
 // Nivel Intermedio
     public  static void Intermedio() {
          int matriz[][]= new int[6][6];
-         int opc1 = 0;
+         
+          String opcenletra;
         
          do{
-             try{
+            
                  
                  Scanner b = new Scanner(System.in);
         System.out.println("    ---------------------------------");
         System.out.println("           NIVEL INTERMEDIO          ");
         
-        for (int x=0; x < matriz.length; x++) {
-         System.out.print("|");
-            for (int y=0; y < matriz[x].length; y++) {
-                System.out.print (matriz[x][y]);
-        if (y!=matriz[x].length-1) System.out.print("\t");
-            }
-                System.out.println("|");
-            }
-        System.out.println("------------------");
-        System.out.println(" Voltear:   V");
-        System.out.println(" Reiniciar: R");
-        System.out.println(" Salir:     S"); 
+             for (int[] matriz1 : matriz) {
+                 System.out.print("|");
+                 for (int y = 0; y < matriz1.length; y++) {
+                     System.out.print(matriz1[y]);
+                     if (y != matriz1.length - 1) {
+                         System.out.print("\t");
+                     }
+                 }
+                 System.out.println("|");
+             }
+        System.out.println("        ------------------");
+        System.out.println("            Voltear:   V");
+        System.out.println("            Reiniciar: R");
+        System.out.println("            Salir:     S"); 
         System.out.println("");
-        System.out.println("Ingresar Opcion:");
-        opc1 = b.nextInt();
+        System.out.println("    Ingresar Opcion:");
+        opcenletra =  b.nextLine();
+        opcenletra = opcenletra.toLowerCase();
         System.out.println("   ---------------------------------");
-        switch(opc1){
+        switch(opcenletra){
          
-             case 1:
+             case "v":
                     System.out.println("hola");
                  break;
          
-             case 2:
+             case "r":
                  System.out.println("holix");
                  break;
                  
-             case 3:
+             case "s":
                  System.out.println("Saliendo....Regreso a Menu Principal");
                  break;
          
                   
          }
-             }catch (InputMismatchException e) {
-                    System.err.println("Error!! solo se puden ingresar datos del tipo numerico");
-                    System.err.println("Intentelo nuevamente");
-                     
-                } catch (Exception e) {
-                    System.out.println("ERROR !!!");
-                }
-         } while (opc1!=3);   
+             
+         } while (!"s".equals(opcenletra));   
     }
 
     
     //Nivel Experto    
     public static void Experto() {
-        
+       
         int matriz [][]= new int[8][8];
+        String opcenletra; 
+        
+        do{
+            
+            Scanner b = new Scanner(System.in);
         System.out.println("    --------------------------------");
         System.out.println("             NIVEL EXPERTO          ");
     
             
-    for (int x=0; x < matriz.length; x++) {
-         System.out.print("|");
-            for (int y=0; y < matriz[x].length; y++) {
-                System.out.print (matriz[x][y]);
-        if (y!=matriz[x].length-1) System.out.print("\t");
+        for (int[] matriz1 : matriz) {
+            System.out.print("|");
+            for (int y = 0; y < matriz1.length; y++) {
+                System.out.print(matriz1[y]);
+                if (y != matriz1.length - 1) {
+                    System.out.print("\t");
+                }
             }
-                System.out.println("|");
-            }
-
+            System.out.println("|");
+        }
+        System.out.println("        ------------------");
+        System.out.println("            Voltear:   V");
+        System.out.println("            Reiniciar: R");
+        System.out.println("            Salir:     S"); 
+        System.out.println("");
+        System.out.println("    Ingresar Opcion:");
+        opcenletra =  b.nextLine();
+        opcenletra = opcenletra.toLowerCase();
+        System.out.println("   ---------------------------------");
+        switch(opcenletra){
+         
+             case "v":
+                    System.out.println("hola");
+                 break;
+         
+             case "r":
+                 System.out.println("holix");
+                 break;
+                 
+             case "s":
+                 System.out.println("Saliendo....Regreso a Menu Principal");
+                 break;
+         
+                  
+         }
+             
+         } while (!"s".equals(opcenletra));
         }
     
     
